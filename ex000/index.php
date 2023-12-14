@@ -8,7 +8,7 @@
 <body>
     <h1>
         <?php 
-        
+        echo"olá, mundo!\u{1F30E}";
         ?>
     </h1>
     <p>Me livrando da maldição</p>
