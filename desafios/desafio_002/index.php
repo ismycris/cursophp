@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"  href="style.css">
     <title>desafio 002</title>
 </head>
 <body>
-    <h2>Sorteador de número</h2>
+    <h2>Sorteador de número</h2> 
     <?php 
     $min = 0;
     $max = 100;
