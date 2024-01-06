@@ -10,13 +10,13 @@
     <main>
         <form action="">
     <?php 
-    $cotacao = 5.17;
+    $cotacao = 4.91 ;
 
     $real = $_REQUEST["din"] ?? 0;
     
     $dolar = $real / $cotacao;
 
-   // $padrao = numfmt_create("pt_br", NumberFormatter::CURRENCY);
+
     $real_formatado = number_format($real, 2, ',', '.');
     $dolar_formatado = number_format($dolar, 2, ',', '.');
 
