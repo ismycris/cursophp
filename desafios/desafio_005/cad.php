@@ -9,7 +9,7 @@
 <body>
     <form action="">
     <?php 
-    $numero = $_REQUEST["Numero"] ?? 0;
+    $numero = $_POST["Numero"] ?? 0;
     $parteint = floor($numero);
     $partefrac = fmod($numero, 1);
 
@@ -18,7 +18,13 @@
 
     echo " -> A parte interira do número é $parteint </p>";
     echo " -> A parte fracionária do número é $partefrac ";
+
+    
     ?>
+        <p><a href="javascript:history.go(-1)" class="voltar-link">Voltar</a></p>
+
+
+    
     </form>
 </body>
 </html>
