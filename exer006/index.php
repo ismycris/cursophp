@@ -20,13 +20,25 @@
         <input type="number" name="v1" id="v1" value="<?=$valor1?>">
         <label for="v2">valor 2</label>
         <input type="number" name="v2" id="v2" value="<?=$valor2?>">
-        <input type="submit" value="somar">
+        <input type="submit" value="Analisar">
 
         </form>
     </main>
     <section id="Resultado">
         <h2>Resultado da soma</h2>
         <?php 
+        //calculos
+            $quociente = intdiv($valor1, $valor2);
+            $resto = $valor1 % $valor2;
+
+            echo "<ul>";
+            echo "<li>Dividendo: $valor1</li>";
+            echo "<li>Divisor: $valor2 </li>";
+            echo "<li>Quociente: $quociente</li>";
+            echo "<li>Resto: $resto</li>";
+            echo "<ul>";
+
+
             $soma = $valor1 + $valor2;
             echo"<p> a soma entre os valores $valor1 e $valor2 e igual a $soma </p>";
         ?>

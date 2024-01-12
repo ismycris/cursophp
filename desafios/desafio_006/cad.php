@@ -7,40 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
-
     <?php 
-    // CAPTURING DATA FROM THE FORM
-    $divi =  $_GET['divi'] ?? 0;
-    $dendo = $_GET['dendo'] ?? 0;
+    //CAPTURANDO DA DADOS DO formulario retroalimentado
+    $valor1 =  $_GET['v1'] ?? 0;
+    $valor2 = $_GET['v2'] ?? 1;
     ?>
+    <main>
+        <h1>Somador de valores</h1>
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
 
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
+        <label for="v1">valor 1</label>
+        <input type="number" name="v1" id="v1" min="0" value="<?=$valor1?>">
+        <label for="v2">valor 2</label>
+        <input type="number" name="v2" id="v2"  min="1"  value="<?=$valor2?>">
+        <input type="submit" value="Analisar">
 
-    <label for="dendo">dividendo</label>
-        <input type="number" name="dendo" id="dendo" value="<?= $dendo ?>">
-
-        <label for="divi">divisor</label>
-        <input type="number" name="divi" id="divi" value="<?= $divi ?>">
-
-
-        <input type="submit" value="Divide">
-    </form>
-
-
+        </form>
     </main>
     <section id="Resultado">
-        <h2>Result of the division</h2>
+        <h2>Resultado</h2>
         <?php 
-            // CHECK IF VALUES ARE NOT ZERO BEFORE DIVISION
-            if ($dendo != 0) {
-                $divisao = $dendo /  $divi;
-                echo $divisao;
-            } else {
-                echo "Cannot divide by zero.";
-            }
+        //calculos
+            $quociente = intdiv($valor1, $valor2);
+            $resto = $valor1 % $valor2;
         ?>
+
+
+    <table class="divisao">
+        <tr>
+            <td><?=$valor1?></td>
+            <td><?=$valor2?></td>
+        </tr>
+        <tr>
+        <td><?=$resto?></td>
+            <td><?=$quociente?></td>
+        </tr >
+    </table>
+
     </section>
-    
 </body>
 </html>
