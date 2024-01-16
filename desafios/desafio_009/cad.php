@@ -23,9 +23,9 @@
             <input type="number"name = "p1" id="p1" min="1" required value="<?=$peso1?>">
 
             <label for="p1">2 valor</label>
-            <input type="number"name = "v2" id="v2" requiredvalue="<?=$valor2?>">
+            <input type="number"name = "v2" id="v2" required value="<?=$valor2?>">
             <label for="p1">2 peso</label>
-            <input type="number"name = "p2" id="p2"  min="1" requiredvalue="<?=$peso2?>">
+            <input type="number"name = "p2" id="p2"  min="1" required value="<?=$peso2?>">
 
             <input type="submit" value="Calcular medias">
     </form>
@@ -38,10 +38,10 @@
         
         ?>
         <h2>Calculo das medias</h2>
-        <p>Analisar os valores {} e {}:</p>
+        <p>Analisar os valores <?=$valor1?> e <?=$valor2?> :</p>
         <ul>
-            <li>A <strong>media aritimetica simples</strong> entre os valores e igual a {}</li>
-            <li>a<strong> media aritimetica ponderada</strong> com pesos {} e {} e igual a {}.</li>
+            <li>A <strong>media aritimetica simples</strong> entre os valores e igual a <?=number_format($ma,2,",",".")?> </li>
+            <li>a<strong> media aritimetica ponderada</strong> com pesos <?=$peso1?>  e <?=$peso2?> e igual a <?=number_format($mp,2,",",".")?> .</li>
         </ul>
 
     </section>
